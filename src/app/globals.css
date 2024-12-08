@@ -2,20 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  user-select: none;
+  --webkit-user-select: none;
+}
+body {
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --dark: #191925;
+    /* --primary: #ff7618; */
+    --primary: #007bff;
+    /* --primary-hover: #cc5e12; */
+    --primary-hover: #0056b3;
+    --grey: #c1c1c1;
+    --primary-dark: #0b1930;
+    --paragraph-gray: #616161;
+    --primary-light: #eee;
+    --white: white;
+    --midnight-blue: #0b1930;
+    --dark-gray-50: #afafaf80;
+    --white-50: #ffffff80;
+    --separator-grey: #fff3;
+  }
+  .dark {
+    --dark: #f5f5f5; /* Light Background for Contrast */
+    --primary: #ffab40; /* Softer Orange for Primary Elements */
+    --grey: #3a3a3a; /* Medium Gray for Subtle Text */
+    --primary-dark: #ffd180; /* Brightened Orange for Highlights */
+    --paragraph-gray: #9e9e9e; /* Lighter Gray for Paragraph Text */
+    --primary-light: #303030; /* Darkened Shade for Contrasting Primary */
+    --white: #0d0d0d; /* Deep Black for Main Text or Foreground */
+    --midnight-blue: #121212; /* Near-Black Midnight Shade */
+    --dark-gray-50: #2b2b2b80; /* Transparent Dark Gray */
+    --white-50: #eeeeee80; /* Transparent Light Shade for Text/Overlays */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.bg-home-get-started {
+  height: 100%;
+  width: 100%;
+  background: url("https://cdn.prod.website-files.com/6461e0860bbf2a9c10f5d2b6/646f26da66539d00cd37525f_Banner%202%20(2).webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.text-stroke-primary {
+  color: transparent; /* Hide the fill of the text */
+  -webkit-text-stroke-width: 2px; /* Thickness of the outline */
+  -webkit-text-stroke-color: var(--primary); /* Outline color */
+  font-family: "DM Sans", "sans-serif";
+}
+
+.bg-aboutus-about {
+  background-image: linear-gradient(#0b1930b3, #0b1930b3),
+    url("https://cdn.prod.website-files.com/6461e0860bbf2a9c10f5d2b6/64747cd971bd1ec3d64fbfb2_Background%201%20(2).webp");
+  background-position: 0 0, 50% 100%;
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
+}
+
+@media screen and (min-width: 1440px) {
+  .bg-home-get-started {
+    background-position: 95% 65%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .bg-home-get-started {
+    background-position: 90% 60%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .bg-home-get-started {
+    background-position: 90% 20%;
+  }
 }
