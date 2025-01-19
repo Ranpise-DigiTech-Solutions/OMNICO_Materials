@@ -27,7 +27,7 @@ const ProductsComponent = () => {
               </div>
               <div className="flex-1 w-full flex flex-col items-start justify-center gap-4">
                 <p className="capitalize text-2xl text-dark">{item.title}</p>
-                <p className="text-wrap text-base text-paragraph-grey leading-7">
+                <p className="text-wrap text-base text-paragraph-grey leading-7 line-clamp-5 truncate">
                   {item.description}
                 </p>
                 <p className="w-full h-[0.5] bg-grey"></p>

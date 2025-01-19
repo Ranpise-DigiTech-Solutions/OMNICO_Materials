@@ -35,8 +35,9 @@ const GetStartedComponent = ({}) => {
           alt="get-started"
           width={0}
           height={0}
-          className="hidden lg:block h-[650] w-auto object-cover"
+          className="hidden lg:block h-screen w-auto object-cover"
           unoptimized
+          quality={100}
         />
       </div>
     </div>
